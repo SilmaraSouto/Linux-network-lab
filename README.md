@@ -14,6 +14,8 @@ On the server, I configured services (Apache, SSH, Samba, DHCP), secured them wi
 * **Gateway** → `10.0.3.2` (VirtualBox NAT adapter for internet access)
 
 ![Netplan Config](imagens/1-netplan.png)
+![Netplan Config](imagens/1.png)
+![Netplan Config](imagens/2-ip address.png)
 
 ---
 
@@ -26,12 +28,10 @@ sudo apt install apache2 -y
 sudo apt install openssh-server -y
 ```
 
-From the client (`192.168.56.102`):
+From my Host machine:
+SSH via PuTTy (Host -> Server):
 
-```bash
-curl http://192.168.56.100
-ssh user@192.168.56.100
-```
+
 
 ![Apache HTTP response](imagens/3.png)
 ![SSH login](imagens/4.png)
@@ -59,11 +59,7 @@ sudo nano /etc/samba/smb.conf
 
 Configured a shared directory with restricted access.
 
-On the client:
-
-```bash
-smbclient -L //192.168.56.100 -U username
-```
+Using my host to check the Samba-folder:
 
    ![Samba Share](imagens/9.png)
    ![Samba Share](imagens/10.png)
