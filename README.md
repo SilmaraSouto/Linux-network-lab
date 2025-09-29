@@ -13,7 +13,7 @@ On the server, I configured services (Apache, SSH, Samba, DHCP), secured them wi
 * **Network mode** → Internal Network (VirtualBox)
 * **Gateway** → `10.0.3.2` (VirtualBox NAT adapter for internet access)
 
-![Netplan Config](images/1-netplan.png)
+![Netplan Config](imagens/1-netplan.png)
 
 ---
 
@@ -33,8 +33,8 @@ curl http://192.168.56.100
 ssh user@192.168.56.100
 ```
 
-![Apache HTTP response](images/3.png)
-![SSH login](images/4.png)
+![Apache HTTP response](imagens/3.png)
+![SSH login](imagens/4.png)
 
 ---
 
@@ -43,8 +43,8 @@ ssh user@192.168.56.100
 * Captured HTTP traffic → credentials and content visible in plaintext.
 * Captured SSH traffic → encrypted packets, no readable content.
 
- ![Wireshark HTTP plaintext](images/7.png)
- ![Wireshark SSH encrypted](images/8.png)
+ ![Wireshark HTTP plaintext](imagens/7.png)
+ ![Wireshark SSH encrypted](imagens/8.png)
 
 ---
 
@@ -65,9 +65,9 @@ On the client:
 smbclient -L //192.168.56.100 -U username
 ```
 
-   ![Samba Share](images/9.png)
-   ![Samba Share](images/10.png)
-   ![Samba Share](images/11.png)                        
+   ![Samba Share](imagens/9.png)
+   ![Samba Share](imagens/10.png)
+   ![Samba Share](imagens/11.png)                        
                             
 
 ---
@@ -83,8 +83,8 @@ sudo ufw enable
 sudo ufw status
 ```
 
- ![UFW status](images/5.png)
- ![UFW status](images/6.png)                        
+ ![UFW status](imagens/5.png)
+ ![UFW status](imagens/6.png)                        
                             
 
 From the client:
@@ -102,7 +102,7 @@ sudo systemctl enable --now docker
 sudo docker run hello-world
 ```
 
-➡️ ![Docker test](images/12.png)
+➡️ ![Docker test](imagens/12.png)
 
 ---
 
