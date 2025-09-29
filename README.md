@@ -15,7 +15,7 @@ On the server, I configured services (Apache, SSH, Samba, DHCP), secured them wi
 
 ![Netplan Config](imagens/1-netplan.png)
 ![Netplan Config](imagens/1.png)
-![Netplan Config](imagens/2-ip address.png)
+![Netplan Config](imagens/2.png)
 
 ---
 
