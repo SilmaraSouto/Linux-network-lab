@@ -18,7 +18,7 @@ On the server, I configured services (Apache, SSH, Samba, DHCP), secured them wi
 ![Netplan Config](imagens/2.png)
 
 ---
-
+ssh sendo b
 ## Apache (HTTP) and SSH (Encrypted)
 
 On the server (`192.168.56.100`):
@@ -81,6 +81,8 @@ sudo ufw deny 80/tcp
 sudo ufw enable
 sudo ufw status
 ```
+HTTP traffic from the client was blocked, showing the connection refused.
+SSH was also blocked in PuTTY, proving that firewall rules effectively control remote access.
 
  ![UFW status](imagens/5.png)
  ![UFW status](imagens/6.png)                        
