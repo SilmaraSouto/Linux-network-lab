@@ -28,9 +28,8 @@ sudo apt install apache2 -y
 sudo apt install openssh-server -y
 ```
 
-From my Host machine:
-SSH via PuTTy (Host -> Server):
-
+I tested Apache HTTP directly from my host machine’s browser,
+while SSH access was tested using PuTTY to connect to the Ubuntu server.
 
 
 ![Apache HTTP response](imagens/3.png)
@@ -39,6 +38,8 @@ SSH via PuTTy (Host -> Server):
 ---
 
 ## Wireshark Traffic Analysis
+
+This demonstrated how insecure services like HTTP can expose sensitive information, while SSH encrypted the traffic, making it unreadable in Wireshark.
 
 * Captured HTTP traffic → credentials and content visible in plaintext.
 * Captured SSH traffic → encrypted packets, no readable content.
@@ -70,10 +71,12 @@ Using my host to check the Samba-folder:
 
 ## Firewall with UFW / iptables
 
+I used UFW for quick firewall rule management and iptables directly to demonstrate granular packet filtering
+
 On the server:
 
 ```bash
-sudo ufw allo 22/tcp
+sudo ufw allow 22/tcp
 sudo ufw deny 80/tcp
 sudo ufw enable
 sudo ufw status
@@ -81,10 +84,7 @@ sudo ufw status
 
  ![UFW status](imagens/5.png)
  ![UFW status](imagens/6.png)                        
-                            
-
-From the client:
-
+                           
 
 ---
 
