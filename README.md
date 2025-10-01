@@ -92,6 +92,9 @@ SSH was also blocked in PuTTY, proving that firewall rules effectively control r
 
 ## Containers (Bonus)
 
+I also explored containerization by running a simple Docker container.
+This highlighted how services can be isolated from the host system, providing an additional security layer and making deployments more portabl
+
 On the server:
 
 ```bash
